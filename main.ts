@@ -1,4 +1,3 @@
-import { inspect } from 'node:util';
 import { createClient } from './db';
 
 async function main() {
