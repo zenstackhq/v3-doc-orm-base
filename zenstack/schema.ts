@@ -79,12 +79,14 @@ export const schema = {
                 author: {
                     name: "author",
                     type: "User",
+                    optional: true,
                     attributes: [{ name: "@relation", args: [{ name: "fields", value: ExpressionUtils.array([ExpressionUtils.field("authorId")]) }, { name: "references", value: ExpressionUtils.array([ExpressionUtils.field("id")]) }] }],
                     relation: { opposite: "posts", fields: ["authorId"], references: ["id"] }
                 },
                 authorId: {
                     name: "authorId",
                     type: "Int",
+                    optional: true,
                     foreignKeyFor: [
                         "author"
                     ]
