@@ -17,7 +17,7 @@ export async function createUsersAndPosts(db: ClientContract<SchemaType>) {
             email: 'u1@test.com',
             posts: {
                 create: [
-                    { id: 1, title: 'Post1', slug: 'post1' },
+                    { id: 1, title: 'Post1', content: 'First post', slug: 'post1' },
                 ]
             }
         }
