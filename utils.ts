@@ -4,7 +4,7 @@ import { SchemaType } from "./zenstack/schema";
 export function createPosts(db: ClientContract<SchemaType>) {
   return db.post.createMany({
     data: [ 
-      { id: 1, title: 'Post1', slug: 'post1' },
+      { id: 1, title: 'Post1', slug: 'post1', content: 'First post' },
       { id: 2, title: 'Post2', slug: 'post2', published: true, viewCount: 1 },
   ]})
 }
